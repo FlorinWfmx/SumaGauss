@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class GaussSum {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int a1 = scanner.nextInt();
+        int a2 = scanner.nextInt();
+        int step = scanner.nextInt();
+
+        int numbersCount = (a2-a1)/step + 1;                            // numar de cifre
+        int gaussNumber = numbersCount * (a1 + a2) / 2;                 // numar de cifre * media cifrelor extreme
+
+        int gaussNumberConcise = ((a2-a1)/step + 1) * (a1 + a2) / 2;    // codul de mai sus combinat
+        System.out.println(gaussNumber);
+        System.out.println(gaussNumberConcise);        
+    }
+
+    public static int getPower (int x, int y){                          // ti-am pus aici si puterile, metoda .pow() din clasa Math   Invoci din Main cu 2 argumente integer
+        return Math.pow(x, y);
+    }
+}
